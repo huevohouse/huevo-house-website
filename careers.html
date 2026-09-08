@@ -36,6 +36,37 @@
       margin: 0 auto var(--space-md);
     }
 
+    .egg-anim-container {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto var(--space-md);
+      position: relative;
+      overflow: visible;
+    }
+
+    .egg-video-hero,
+    .egg-video-thankyou {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      .egg-anim-container {
+        width: 100px;
+        height: 100px;
+      }
+      .egg-video-hero,
+      .egg-video-thankyou {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
     .breadcrumb {
       font-family: var(--font-body);
       font-size: 0.8rem;
@@ -310,11 +341,12 @@
 
   <!-- HERO -->
   <section class="careers-hero">
-    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Work With Us</div>
+    <div class="egg-anim-container">
+      <video class="egg-video-hero" src="egg-crack-transparent.webm" muted playsinline autoplay></video>
+    </div>
     <h1>JOIN THE CREW</h1>
     <p>We're opening in Santa Clarita. Come work with us.</p>
     <a href="#apply" class="btn btn-primary">Apply Now</a>
-
   </section>
 
   <!-- PERKS BAR -->
@@ -394,9 +426,11 @@
     </form>
 
     <div class="form-thankyou" id="thankyou">
+      <div class="egg-anim-container">
+        <video class="egg-video-thankyou" src="egg-crack-transparent.webm" muted playsinline></video>
+      </div>
       <h3>Shell Yeah! 🥚</h3>
       <p>We got your application. We'll reach out soon.</p>
-      <a href="index.html" class="btn btn-white" style="margin-top: var(--space-md);">Back to Home</a>
     </div>
   </section>
 
@@ -435,7 +469,12 @@
     if (window.location.hash === '#thankyou') {
       const f = document.getElementById('careers-form');
       const t = document.getElementById('thankyou');
-      if (f && t) { f.style.display = 'none'; t.classList.add('show'); }
+      if (f && t) {
+        f.style.display = 'none';
+        t.classList.add('show');
+        const vid = t.querySelector('.egg-video-thankyou');
+        if (vid) { vid.play(); }
+      }
     }
   </script>
 </body>
