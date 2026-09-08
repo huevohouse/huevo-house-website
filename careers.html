@@ -15,7 +15,7 @@
   <style>
     .careers-hero {
       background: var(--yellow);
-      padding: 140px var(--space-lg) var(--space-xl);
+      padding: var(--space-xl) var(--space-lg);
       text-align: center;
     }
 
@@ -273,9 +273,11 @@
       margin-bottom: var(--space-sm);
     }
 
+    /* All screens — no fixed header on careers page */
+    .site-header { position: relative !important; }
+    .header-scrolled { display: none !important; }
+
     @media (max-width: 768px) {
-      .site-header { position: relative; }
-      .header-scrolled { display: none !important; }
       .form-row { grid-template-columns: 1fr; }
       .careers-hero { padding-top: var(--space-lg); padding-bottom: var(--space-lg); }
       .careers-hero h1 { font-size: 2.5rem; }
