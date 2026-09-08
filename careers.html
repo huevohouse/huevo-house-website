@@ -274,8 +274,10 @@
     }
 
     @media (max-width: 768px) {
+      .site-header { position: relative; }
+      .header-scrolled { display: none !important; }
       .form-row { grid-template-columns: 1fr; }
-      .careers-hero { padding-top: 100px; padding-bottom: var(--space-lg); }
+      .careers-hero { padding-top: var(--space-lg); padding-bottom: var(--space-lg); }
       .careers-hero h1 { font-size: 2.5rem; }
       .apply-section { padding: var(--space-lg) var(--space-md); }
       .apply-form { padding: var(--space-lg) var(--space-md); }
