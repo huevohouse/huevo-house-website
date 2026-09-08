@@ -244,7 +244,27 @@
 
     @media (max-width: 768px) {
       .form-row { grid-template-columns: 1fr; }
-      .careers-hero { padding-top: 110px; }
+      .careers-hero { padding-top: 100px; padding-bottom: var(--space-lg); }
+      .careers-hero h1 { font-size: 2.5rem; }
+      .apply-section { padding: var(--space-lg) var(--space-md); }
+      .apply-form { padding: var(--space-lg) var(--space-md); }
+      .form-field input,
+      .form-field textarea,
+      .form-field select { font-size: 16px; padding: 12px 14px; }
+      .avail-row { gap: 8px; }
+      .avail-row label { padding: 8px 14px; font-size: 0.9rem; }
+      .radio-group label { font-size: 1rem; padding: 4px 0; }
+      .perks-bar { flex-direction: column; align-items: center; gap: 4px; padding: var(--space-sm) var(--space-md); }
+      .perks-bar span { font-size: 0.75rem; }
+      .nav-initial { display: none; }
+      .scrolled-links { display: none; }
+      .menu-toggle { display: flex; }
+    }
+
+    @media (max-width: 380px) {
+      .careers-hero h1 { font-size: 2rem; }
+      .apply-form { padding: var(--space-md); }
+      .avail-row label { padding: 6px 10px; font-size: 0.85rem; }
     }
   </style>
 </head>
