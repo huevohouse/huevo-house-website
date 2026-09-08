@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huevo House — Bakersfield's Most Eggstraordinary Restaurant</title>
+  <meta name="description" content="EAT. DRINK. LAUGH. REPEAT. Huevo House is Bakersfield's quirkiest breakfast, brunch & lunch spot. Two locations. Dine-in, delivery & curbside pickup.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=18">
+</head>
+<body>
+  <!-- HEADER WRAPPER — contains both states -->
+  <header class="site-header" id="site-header">
+    <!-- STATE 1: Initial thin banner + transparent nav (visible on landing) -->
+    <div class="header-initial">
+      <div class="announcement-bar">
+        <img src="hen-gold.png" alt="" class="announce-hen" width="36" height="36">
+        <span>WE ARE OPEN FOR DINE-IN, DELIVERY AND CURBSIDE PICKUP!</span>
+      </div>
+      <nav class="nav-initial" aria-label="Main navigation">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#order">Order Now</a>
+        <a href="#locations">Locations & Hours</a>
+        <a href="#contact">Work With Us</a>
+      </nav>
+    </div>
+
+    <!-- STATE 2: Scrolled sticky header (hidden initially, appears on scroll) -->
+    <nav class="header-scrolled" aria-label="Main navigation">
+      <a href="#hero" class="scrolled-logo">
+        <img src="logo.png" alt="Huevo House" width="55" height="55">
+      </a>
+      <div class="scrolled-links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#order">Order Now</a>
+        <a href="#locations">Locations & Hours</a>
+        <a href="#contact">Work With Us</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#order">Order Now</a>
+    <a href="#locations">Locations & Hours</a>
+    <a href="#contact">Work With Us</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <!-- Side artwork -->
+    <img src="hero-art-left.png?v=4" alt="" class="hero-art hero-art-left" aria-hidden="true" loading="eager">
+    <img src="hero-art-right.png?v=4" alt="" class="hero-art hero-art-right" aria-hidden="true" loading="eager">
+
+    <div class="hero-content">
+      <!-- tagline removed — was showing behind header -->
+
+      <h1 class="hero-title">
+        <span class="hero-word">HUEV</span><span class="egg-slot"><video
+          class="egg-video"
+          src="egg-crack-transparent.webm"
+          muted
+          playsinline
+          preload="auto"
+        ></video></span>
+      </h1>
+      <h1 class="hero-title hero-title-line2">HOUSE</h1>
+
+      <p class="hero-tagline">EAT. DRINK. LAUGH. REPEAT.</p>
+      <p class="hero-sub">American Brunch. Mexican Heart. Big Huevo Energy.</p>
+
+      <div class="hero-actions">
+        <a href="#order" class="btn btn-primary">Order Now</a>
+        <a href="#menu" class="btn btn-outline">See Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- (open banner is now part of the header) -->
+
+  <!-- MARQUEE -->
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>SEIZE THE EGG 🍳</span>
+      <span>GRAB LIFE BY THE HUEVOS 🌮</span>
+      <span>BREAKFAST ALL DAY ☀️</span>
+      <span>EGGSTRAORDINARY 🥑</span>
+      <span>SHELL YEAH 🥚</span>
+      <span>DON'T BE A CHICKEN 🐔</span>
+      <span>YOLK'S ON YOU 😎</span>
+      <span>SUNNY SIDE ALWAYS ☀️</span>
+      <span>EGGS BEFORE EVERYTHING 🍳</span>
+      <span>OVER EASY DOES IT 🤙</span>
+      <span>SEIZE THE EGG 🍳</span>
+      <span>GRAB LIFE BY THE HUEVOS 🌮</span>
+      <span>BREAKFAST ALL DAY ☀️</span>
+      <span>EGGSTRAORDINARY 🥑</span>
+      <span>SHELL YEAH 🥚</span>
+      <span>DON'T BE A CHICKEN 🐔</span>
+      <span>YOLK'S ON YOU 😎</span>
+      <span>SUNNY SIDE ALWAYS ☀️</span>
+      <span>EGGS BEFORE EVERYTHING 🍳</span>
+      <span>OVER EASY DOES IT 🤙</span>
+    </div>
+  </section>
+
+  <!-- MENU HIGHLIGHTS -->
+  <section id="menu" class="section section-eggs">
+    <div class="section-inner">
+      <h2 class="section-title">The Goods <span class="title-icon">🍳</span></h2>
+      <p class="section-subtitle">Breakfast &bull; Brunch &bull; Lunch &bull; Drinks and More</p>
+
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="card-icon">🌮</div>
+          <h3>Eggstraordinary Breakfast Tacos</h3>
+          <p>Our signature breakfast tacos that put us on the map. Fluffy eggs, fresh toppings, bold flavors.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-icon">🥘</div>
+          <h3>Birria Benedicts</h3>
+          <p>A Huevo House original — rich birria, poached eggs, hollandaise. Brunch just leveled up.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-icon">🍕</div>
+          <h3>Breakfast Pizza</h3>
+          <p>Fermented pinsa crust topped with beans, chorizo, eggs, cheese, avocado, cilantro, queso fresco and crema.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-icon">🍗</div>
+          <h3>Chicken Wings</h3>
+          <p>Crispy, saucy, and impossible to eat just one. Pick your heat level and dig in.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-icon">🍺</div>
+          <h3>Beer Bettered Fish &amp; Chips</h3>
+          <p>Crispy beer-battered fish, golden fries, house slaw. Pairs perfectly with our draft selection.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="card-icon">🥂</div>
+          <h3>Happy Hour Mimosas</h3>
+          <p>50% off all mimosas, Mon–Fri, 1PM onwards. Because every afternoon deserves bubbles.</p>
+        </article>
+      </div>
+
+      <div class="section-cta">
+        <a href="#" class="btn btn-primary btn-lg">See Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <!-- Halftone dot overlay -->
+    <div class="about-halftone" aria-hidden="true"></div>
+
+    <!-- Decorative egg ornament -->
+    <img src="about-egg-decor.png" alt="" class="about-decor-egg" aria-hidden="true" width="70" height="90" loading="lazy">
+
+    <!-- Flourish ornament -->
+    <img src="about-flourish-decor.png" alt="" class="about-decor-flourish" aria-hidden="true" width="60" loading="lazy">
+
+    <!-- Chef rooster accent -->
+    <img src="about-rooster-popart.jpg" alt="" class="about-decor-rooster" aria-hidden="true" width="100" height="100" loading="lazy">
+
+    <div class="section-inner about-inner">
+      <!-- Pop art illustration — left side -->
+      <div class="about-art">
+        <img src="about-popart.jpg" alt="Pop art illustration of a woman holding a fried egg" width="380" height="500" loading="lazy" class="about-art-img">
+      </div>
+
+      <!-- Content — right side -->
+      <div class="about-content">
+        <h2 class="about-heading">Who We Are</h2>
+        <div class="about-accent-line" aria-hidden="true"></div>
+
+        <p class="about-quote">"Make breakfast fun, make it bold, make it for everyone."</p>
+
+        <p class="about-lead">We're not your average breakfast spot. Huevo House is where <strong>American breakfast classics</strong> meet <strong>Mexican soul food</strong> — and they get along great.</p>
+
+        <p class="about-body">Started in Bakersfield with a simple idea and a whole lot of huevos. Our quirky egg-themed everything matches our personality — a little weird, a lot delicious. <em>Buen provecho.</em></p>
+
+        <!-- Stats row -->
+        <div class="about-stats-row">
+          <div class="about-stat">
+            <span class="about-stat-num">2</span>
+            <span class="about-stat-label">Locations</span>
+          </div>
+          <div class="about-stat-divider" aria-hidden="true"></div>
+          <div class="about-stat">
+            <span class="about-stat-num">7</span>
+            <span class="about-stat-label">Days a Week</span>
+          </div>
+          <div class="about-stat-divider" aria-hidden="true"></div>
+          <div class="about-stat">
+            <span class="about-stat-num">∞</span>
+            <span class="about-stat-label">Egg Puns</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <!-- HUNGRY YET — Interactive React widget -->
+  <div id="hungry-yet-widget"></div>
+  <link rel="stylesheet" href="widget-dist/hungry-yet.css">
+  <script src="widget-dist/hungry-yet.js" defer></script>
+
+  <!-- LOCATIONS -->
+  <section id="locations" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Find Us <span class="title-icon">📍</span></h2>
+      <p class="section-subtitle">Two spots, same eggstraordinary vibes</p>
+      <div class="locations-grid">
+        <article class="location-card">
+          <div class="loc-badge">MING AVE</div>
+          <h3>Huevo House — Ming</h3>
+          <address>Ming Ave, Bakersfield, CA</address>
+          <p class="loc-detail">🕐 Open 7 Days a Week</p>
+          <p class="loc-detail">🍽️ Dine-in &bull; Pickup &bull; Delivery</p>
+          <a href="#" class="btn btn-primary">Get Directions</a>
+        </article>
+        <article class="location-card">
+          <div class="loc-badge loc-badge-blue">DOWNTOWN</div>
+          <h3>Huevo House — Downtown</h3>
+          <address>Downtown, Bakersfield, CA</address>
+          <p class="loc-detail">🕐 Open 7 Days a Week</p>
+          <p class="loc-detail">🍽️ Dine-in &bull; Pickup &bull; Delivery</p>
+          <a href="#" class="btn btn-blue">Get Directions</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-yellow">
+    <div class="section-inner">
+      <h2 class="section-title">Say Hello <span class="title-icon">👋</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>Got questions? Want to cater your next fiesta? Just wanna say you love eggs? Hit us up.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/huevohouse" target="_blank" rel="noopener" class="social-btn">📸 Instagram</a>
+            <a href="https://facebook.com/huevohouse" target="_blank" rel="noopener" class="social-btn">👍 Facebook</a>
+            <a href="#" class="social-btn">⭐ Yelp</a>
+            <a href="#" class="social-btn">📍 Google</a>
+          </div>
+        </div>
+        <form class="contact-form" action="#" method="POST">
+          <h3>What's Crackin'? 🍳</h3>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com">
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Tell us what's on your mind..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send It 🍳</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="../huevo-house/assets/huevo-house-logo.png" alt="Huevo House" class="footer-logo" width="80" height="80">
+      <p class="footer-tagline">EAT. DRINK. LAUGH. REPEAT.</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/huevohouse" target="_blank" rel="noopener">FB</a>
+        <a href="https://instagram.com/huevohouse" target="_blank" rel="noopener">IG</a>
+        <a href="#">YELP</a>
+        <a href="#">GOOGLE</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Huevo House Cafe — Bakersfield. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

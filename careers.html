@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work With Us — Huevo House | Santa Clarita Jobs</title>
+  <meta name="description" content="Join the Huevo House crew in Santa Clarita! We're hiring cooks, servers, hosts, bussers, dishwashers and bartenders. Apply now.">
+  <meta property="og:title" content="Work With Us — Huevo House">
+  <meta property="og:description" content="We're hiring! Join the Huevo House crew in Santa Clarita.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=18">
+  <style>
+    .careers-hero {
+      background: var(--yellow);
+      padding: 140px var(--space-lg) var(--space-xl);
+      text-align: center;
+    }
+
+    .careers-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 2rem + 5vw, 5rem);
+      color: var(--text);
+      line-height: 0.95;
+      margin-bottom: var(--space-sm);
+    }
+
+    .careers-hero p {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--text);
+      opacity: 0.7;
+      max-width: 420px;
+      margin: 0 auto var(--space-md);
+    }
+
+    .breadcrumb {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--text);
+      opacity: 0.4;
+      margin-bottom: var(--space-md);
+    }
+
+    .breadcrumb a { opacity: 0.7; }
+    .breadcrumb a:hover { opacity: 1; }
+
+    /* Compact positions list */
+    .positions-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      justify-content: center;
+      margin: var(--space-lg) auto;
+      max-width: 700px;
+    }
+
+    .pos-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--white);
+      border: 2px solid var(--yellow-dark);
+      border-radius: var(--radius-pill);
+      padding: 8px 16px;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+
+    .pos-chip:nth-child(even) { border-color: var(--blue); }
+
+    .pos-chip .pay {
+      color: var(--blue-dark);
+      font-size: 0.8rem;
+    }
+
+    /* Perks inline */
+    .perks-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      justify-content: center;
+      padding: var(--space-md) var(--space-lg);
+      background: var(--text);
+    }
+
+    .perks-bar span {
+      color: var(--yellow);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+
+    /* Form section */
+    .apply-section {
+      background: var(--blue);
+      padding: var(--space-xl) var(--space-lg);
+    }
+
+    .apply-form {
+      background: var(--white);
+      border-radius: 0;
+      padding: var(--space-xl) var(--space-lg);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .apply-form h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 1rem + 2vw, 2.2rem);
+      margin-bottom: var(--space-lg);
+      text-align: center;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+    }
+
+    .form-field { margin-bottom: var(--space-md); }
+
+    .form-field label {
+      display: block;
+      font-family: 'Open Sans', var(--font-body), sans-serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .form-field input,
+    .form-field textarea,
+    .form-field select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      font-family: 'Open Sans', var(--font-body), sans-serif;
+      font-size: 1rem;
+      background: var(--white);
+      outline: none;
+      color: var(--text);
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #999;
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus,
+    .form-field select:focus {
+      border-style: dotted;
+      border-color: inherit;
+      border-width: thin;
+    }
+
+    .form-field select { appearance: none; cursor: pointer; }
+    .form-field textarea { resize: vertical; }
+
+    .apply-form .btn-primary {
+      background: transparent;
+      color: var(--text);
+      border: 2px solid var(--text);
+      border-radius: 0;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 14px 24px;
+    }
+
+    .apply-form .btn-primary:hover {
+      background: var(--text);
+      color: var(--white);
+    }
+
+    .avail-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .avail-row label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.8rem;
+      font-family: var(--font-body);
+      cursor: pointer;
+      padding: 4px 10px;
+      border: 1.5px solid #E0E0E0;
+      border-radius: var(--radius-sm);
+    }
+
+    .avail-row label:has(input:checked) {
+      border-color: var(--blue);
+      background: var(--blue-light);
+    }
+
+    .avail-row input[type="checkbox"] { accent-color: var(--blue); width: 14px; height: 14px; }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .radio-group input[type="radio"] { accent-color: var(--blue); width: 16px; height: 16px; }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    .form-thankyou {
+      display: none;
+      text-align: center;
+      padding: var(--space-xl);
+    }
+
+    .form-thankyou.show { display: block; }
+
+    .form-thankyou h3 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    @media (max-width: 768px) {
+      .form-row { grid-template-columns: 1fr; }
+      .careers-hero { padding-top: 110px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-initial">
+      <div class="announcement-bar">
+        <img src="hen-gold.png" alt="Huevo House hen icon" class="announce-hen" width="36" height="36">
+        <span>NOW HIRING — SANTA CLARITA OPENING SOON!</span>
+      </div>
+      <nav class="nav-initial" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#menu">Menu</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#locations">Locations</a>
+        <a href="careers.html" style="border-bottom: 3px solid var(--text);">Work With Us</a>
+      </nav>
+    </div>
+    <nav class="header-scrolled" aria-label="Main navigation">
+      <a href="index.html" class="scrolled-logo">
+        <img src="logo.png" alt="Huevo House" width="55" height="55">
+      </a>
+      <div class="scrolled-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#menu">Menu</a>
+        <a href="index.html#locations">Locations</a>
+        <a href="careers.html">Work With Us</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="index.html#locations">Locations</a>
+    <a href="careers.html">Work With Us</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="careers-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Work With Us</div>
+    <h1>JOIN THE CREW</h1>
+    <p>We're opening in Santa Clarita. Come work with us.</p>
+    <a href="#apply" class="btn btn-primary">Apply Now</a>
+
+  </section>
+
+  <!-- PERKS BAR -->
+  <div class="perks-bar">
+    <span>🍳 Free Meals</span>
+    <span>•</span>
+    <span>💰 Competitive Pay</span>
+    <span>•</span>
+    <span>⏰ No Late Nights</span>
+    <span>•</span>
+    <span>📈 Growth</span>
+    <span>•</span>
+    <span>🎉 Fun Crew</span>
+  </div>
+
+  <!-- FORM -->
+  <section id="apply" class="apply-section">
+    <form class="apply-form" id="careers-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="bc95ed06-00cb-4610-a3e2-906adbca9657">
+      <input type="hidden" name="subject" value="New Job Application — Huevo House SC">
+      <input type="hidden" name="redirect" value="https://buildwithnav.github.io/huevo-house-website/careers.html#thankyou">
+      <input type="checkbox" name="botcheck" style="display: none;">
+
+      <h3>Let's Go 🥚</h3>
+
+      <div class="form-field">
+        <label for="fullname">Name *</label>
+        <input type="text" id="fullname" name="Full Name" required placeholder="Full name">
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="Email" required placeholder="Active email">
+      </div>
+
+      <div class="form-field">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="Phone" required placeholder="Contact Number">
+      </div>
+
+      <div class="form-field">
+        <label>Education Level</label>
+        <div class="radio-group">
+          <label><input type="radio" name="Education" value="Junior High School"> Junior High School</label>
+          <label><input type="radio" name="Education" value="High School"> High School</label>
+          <label><input type="radio" name="Education" value="College"> College</label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Which position(s) are you interested in? *</label>
+        <div class="avail-row">
+          <label><input type="checkbox" name="Position" value="Kitchen"> Kitchen</label>
+          <label><input type="checkbox" name="Position" value="Front of the House"> Front of the House</label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Weekdays Working Availability</label>
+        <div class="avail-row">
+          <label><input type="checkbox" name="Availability" value="Sunday"> Sun</label>
+          <label><input type="checkbox" name="Availability" value="Monday"> Mon</label>
+          <label><input type="checkbox" name="Availability" value="Tuesday"> Tue</label>
+          <label><input type="checkbox" name="Availability" value="Wednesday"> Wed</label>
+          <label><input type="checkbox" name="Availability" value="Thursday"> Thu</label>
+          <label><input type="checkbox" name="Availability" value="Friday"> Fri</label>
+          <label><input type="checkbox" name="Availability" value="Saturday"> Sat</label>
+        </div>
+        <p class="form-note">Pick 2 at least</p>
+      </div>
+
+      <div class="form-field">
+        <label for="experience">Previous Experience *</label>
+        <textarea id="experience" name="Experience" rows="4" required placeholder="Your message here"></textarea>
+      </div>
+
+      <div class="form-field">
+        <label for="resume">Resume (optional)</label>
+        <input type="file" id="resume" name="Resume" accept=".pdf,.doc,.docx" style="padding: 8px;">
+      </div>
+
+      <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+    </form>
+
+    <div class="form-thankyou" id="thankyou">
+      <h3>Shell Yeah! 🥚</h3>
+      <p>We got your application. We'll reach out soon.</p>
+      <a href="index.html" class="btn btn-white" style="margin-top: var(--space-md);">Back to Home</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="logo.png" alt="Huevo House logo" class="footer-logo" width="60" height="60">
+      <p class="footer-tagline">EAT. DRINK. LAUGH. REPEAT.</p>
+      <p class="footer-copy">&copy; 2026 Huevo House Cafe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('site-header');
+    const initialH = document.querySelector('.header-initial');
+    if (header && initialH) {
+      const setH = () => header.style.setProperty('--initial-h', `-${initialH.offsetHeight}px`);
+      setH();
+      window.addEventListener('resize', setH);
+      window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 120));
+    }
+
+    const toggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = mobileNav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+        mobileNav.setAttribute('aria-hidden', !open);
+      });
+      mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+      }));
+    }
+
+    if (window.location.hash === '#thankyou') {
+      const f = document.getElementById('careers-form');
+      const t = document.getElementById('thankyou');
+      if (f && t) { f.style.display = 'none'; t.classList.add('show'); }
+    }
+  </script>
+</body>
+</html>
